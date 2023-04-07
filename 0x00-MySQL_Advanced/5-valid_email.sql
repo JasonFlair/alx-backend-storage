@@ -1,0 +1,1 @@
+-- validates email and resets the valid_email boolean
