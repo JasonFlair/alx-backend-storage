@@ -1,5 +1,5 @@
--- Script that creates a stored procedure AddBonus
--- that adds a new correction for a student.
+-- A script that creates a stored procedure AddBonus
+-- this script adds a new correction for a student.
 DELIMITER $$ ;
 CREATE PROCEDURE AddBonus(IN id INT, IN projectname varchar(255), IN projectscore INT)
 BEGIN
