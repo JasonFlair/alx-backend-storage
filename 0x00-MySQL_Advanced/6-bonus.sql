@@ -14,7 +14,6 @@ BEGIN
 
     -- insert or update the score for the specified user and project
     INSERT INTO corrections (user_id, project_id, score) VALUES (id, @project_id, projectscore)
-    ON DUPLICATE KEY UPDATE score = projectscore;
 END;
 $$
 DELIMITER ;
