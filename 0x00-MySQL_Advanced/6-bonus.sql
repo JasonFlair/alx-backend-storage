@@ -1,7 +1,7 @@
 -- Script that creates a stored procedure AddBonus
 -- that adds a new correction for a student.
 DELIMITER $$ ;
-CREATE PROCEDURE AddBonus(IN id INT, IN projectname CHAR(50), IN projectscore INT)
+CREATE PROCEDURE AddBonus(IN id INT, IN projectname varchar(255), IN projectscore INT)
 BEGIN
     -- get the project id from the projects table
     SET @project_id = (SELECT id FROM projects WHERE name = projectname);
