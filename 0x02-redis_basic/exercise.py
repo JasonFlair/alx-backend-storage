@@ -36,7 +36,7 @@ def call_history(method: Callable) -> Callable:
 
         # *args are normalised to str since redis
         # can only store strings, bytes and numbers
-        self._redis.rpush(input_name, str(*args))
+        self._redis.rpush(input_name, str(args))
         output = method(self, *args)
         self._redis.rpush(output_name, str(output))
         return output
