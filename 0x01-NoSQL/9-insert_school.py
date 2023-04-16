@@ -12,5 +12,5 @@ def insert_school(mongo_collection, **kwargs):
     # data returned is stored and id is returned
     data = mongo_collection.insert_one(kwargs)
     return data.inserted_id
-    # i also noticed returning data itself will 
-    # simply return the id.
+    # i also noticed returning data itself after using 
+    # simple .insert instead of insert_one, returns the id
